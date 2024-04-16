@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Quadrados</title>
+</head>
+<body>
+    <h2>Calculadora de Quadrados</h2>
+
+    <p>Insira 3 valores abaixo:</p>
+
+    <input type="number" id="valor1" placeholder="Valor 1">
+    <input type="number" id="valor2" placeholder="Valor 2">
+    <input type="number" id="valor3" placeholder="Valor 3">
+
+    <button onclick="calcularQuadrados()">Calcular Quadrados</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularQuadrado(numero) {
+            return numero * numero;
+        }
+
+        function calcularQuadrados() {
+            var valor1 = parseFloat(document.getElementById("valor1").value);
+            var valor2 = parseFloat(document.getElementById("valor2").value);
+            var valor3 = parseFloat(document.getElementById("valor3").value);
+
+            var quadrado1 = calcularQuadrado(valor1);
+            var quadrado2 = calcularQuadrado(valor2);
+            var quadrado3 = calcularQuadrado(valor3);
+
+            document.getElementById("resultado").innerText = "O quadrado de " + valor1 + " é " + quadrado1 + ", o quadrado de " + valor2 + " é " + quadrado2 + ", e o quadrado de " + valor3 + " é " + quadrado3 + ".";
+        }
+    </script>
+</body>
+</html>

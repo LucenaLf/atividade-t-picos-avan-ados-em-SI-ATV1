@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Número Par</title>
+</head>
+<body>
+    <h2>Verificador de Número Par</h2>
+
+    <p>Insira um valor abaixo:</p>
+
+    <input type="number" id="valor" placeholder="Digite um valor">
+
+    <button onclick="verificarPar()">Verificar Par</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificarPar() {
+            var valor = parseInt(document.getElementById("valor").value);
+
+            if (valor % 2 === 0) {
+                document.getElementById("resultado").innerText = "O valor " + valor + " é par.";
+            } else {
+                document.getElementById("resultado").innerText = "O valor " + valor + " não é par.";
+            }
+        }
+    </script>
+</body>
+</html>
